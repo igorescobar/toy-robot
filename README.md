@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/igorescobar/toy-robot.svg?branch=master)](https://travis-ci.org/igorescobar/toy-robot)
+[![Code Climate](https://codeclimate.com/github/igorescobar/toy-robot/badges/gpa.svg)](https://codeclimate.com/github/igorescobar/toy-robot)
+[![Test Coverage](https://codeclimate.com/github/igorescobar/toy-robot/badges/coverage.svg)](https://codeclimate.com/github/igorescobar/toy-robot/coverage)
 
 ## Description
 
