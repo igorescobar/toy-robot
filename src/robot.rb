@@ -1,12 +1,11 @@
-require "./src/reporter"
-require "./src/interface"
-require "./src/router"
+require './src/reporter'
+require './src/interface'
+require './src/router'
 
 class Robot < Interface
-
   attr_accessor :x, :y, :facing, :router
 
-  def initialize(x = 0, y = 0, facing = :north, router=Router)
+  def initialize(x = 0, y = 0, facing = :north, router = Router)
     @router = router.new x, y, facing
     @facing = @router.facing
     @x = @router.x

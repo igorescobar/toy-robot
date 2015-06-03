@@ -5,6 +5,6 @@ class Reporter
   end
 
   def report
-    puts [@router.x, @router.y, @router.facing.to_s.upcase].join(",")
+    puts [@router.x, @router.y, @router.facing.to_s.upcase].join(',')
   end
 end

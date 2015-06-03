@@ -1,5 +1,4 @@
 class Router
-
   attr_accessor :x, :y, :facing
 
   @@x_range = (0..4)
@@ -29,7 +28,7 @@ class Router
     next_x = @x + @@route_directions[@facing][:x]
     next_y = @y + @@route_directions[@facing][:y]
 
-    [ valid_range!(next_x, @@x_range) , valid_range!(next_y, @@y_range) ]
+    [valid_range!(next_x, @@x_range), valid_range!(next_y, @@y_range)]
   end
 
   def turn_left
