@@ -12,6 +12,10 @@ Install gem dependencies with Bundle:
 
     $ bundle install
 
+## Changelog
+
+    $ stepup changelog
+
 ## Testing
 
 Code quality is attempted by using [RSpec](http://rspec.info/) for testing, [SimpleCov](https://github.com/colszowka/simplecov) for code test coverage, [Reek](https://github.com/troessner/reek) to fix code smells, as well as [Code Climate](https://codeclimate.com/) for quality metrics.
