@@ -7,9 +7,10 @@
 A simulation of a toy robot moving on a square tabletop, of dimensions 5 units x 5 units.  See [Specification](#specification) below for details.
 
 ## Installation
-
-Install gem dependencies with Bundle:
-
+    $ brew update
+    $ brew install rbenv ruby-build
+    $ rbenv install 2.1.6
+    $ gem install bundler
     $ bundle install
 
 ## Changelog
@@ -22,7 +23,7 @@ Code quality is attempted by using [RSpec](http://rspec.info/) for testing, [Sim
 
 Run tests:
 
-    $ rspec spec/
+    $ rspec
 
 Check test coverage (after running rspec):
 
