@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/igorescobar/toy-robot.svg?branch=master)](https://travis-ci.org/igorescobar/toy-robot)
+
 ## Description
 
 A simulation of a toy robot moving on a square tabletop, of dimensions 5 units x 5 units.  See [Specification](#specification) below for details.
