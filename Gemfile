@@ -1,14 +1,15 @@
 # A sample Gemfile
-source "https://rubygems.org"
+source 'https://rubygems.org'
 ruby File.read('.ruby-version').strip
 
 
 group :development do
-  gem "rspec"
+  gem 'rspec'
   gem 'simplecov'
-  gem "byebug"
-  gem "reek"
-  gem "yard"
+  gem 'byebug'
+  gem 'reek'
+  gem 'rubocop', require: false
+  gem 'yard'
 end
 
 group :test do
