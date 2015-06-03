@@ -6,6 +6,29 @@
 
 A simulation of a toy robot moving on a square tabletop, of dimensions 5 units x 5 units.  See [Specification](#specification) below for details.
 
+## Installation
+
+Install gem dependencies with Bundle:
+
+    $ bundle install
+
+## Testing
+
+Code quality is attempted by using [RSpec](http://rspec.info/) for testing, [SimpleCov](https://github.com/colszowka/simplecov) for code test coverage, [Reek](https://github.com/troessner/reek) to fix code smells, as well as [Code Climate](https://codeclimate.com/) for quality metrics.
+
+Run tests:
+
+    $ rspec spec/
+
+Check test coverage (after running rspec):
+
+    $ open coverage/index.html
+
+Check code smells:
+
+    $ rake reek
+
+
 ## Specification
 
 ### Description
@@ -64,3 +87,9 @@ Output: `3,3,NORTH`
 ### Deliverables
 The Ruby source files, the test data and any test code.
 It is not required to provide any graphical output showing the movement of the toy robot.
+
+#### Copyright
+
+Copyright (c) 2015 Igor Escobar
+
+See [MIT LICENSE](./LICENSE)  for details.
