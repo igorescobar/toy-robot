@@ -21,38 +21,27 @@ describe Robot do
   end
 
   context "#right" do
-    let(:robot) { Robot.new }
+    before(:all) { @robot = Robot.new }
+    before(:each) { @robot.right }
+    subject { @robot.facing }
 
-    it "should change rotate 90 degrees clock-wise" do
-      expect(robot.facing).to be :north
-      robot.right
-      expect(robot.facing).to be :east
-      robot.right
-      expect(robot.facing).to be :south
-      robot.right
-      expect(robot.facing).to be :west
-      robot.right
-      expect(robot.facing).to be :north
-      robot.right
-      expect(robot.facing).to be :east
-    end
+    it { is_expected.to be :east }
+    it { is_expected.to be :south }
+    it { is_expected.to be :west }
+    it { is_expected.to be :north }
+    it { is_expected.to be :east }
   end
 
   context "#left" do
-    let(:robot) { Robot.new }
-    it "should change rotate 90 degrees counter clock-wise" do
-      expect(robot.facing).to be :north
-      robot.left
-      expect(robot.facing).to be :west
-      robot.left
-      expect(robot.facing).to be :south
-      robot.left
-      expect(robot.facing).to be :east
-      robot.left
-      expect(robot.facing).to be :north
-      robot.left
-      expect(robot.facing).to be :west
-    end
+    before(:all) { @robot = Robot.new }
+    before(:each) { @robot.left }
+    subject { @robot.facing }
+
+    it { is_expected.to be :west }
+    it { is_expected.to be :south }
+    it { is_expected.to be :east }
+    it { is_expected.to be :north }
+    it { is_expected.to be :west }
   end
 
   context "#left and #right at the same context" do
