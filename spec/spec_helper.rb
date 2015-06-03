@@ -1,6 +1,7 @@
 require File.join File.dirname(__FILE__), 'test_helper'
 
 if ENV['TRAVIS']
+  ENV['CODECLIMATE_REPO_TOKEN']="34bd48cdd39954301cf2b49e07513f51e7665420ef7bcb0887b3f7a3f3d0e8bd"
   require 'codeclimate-test-reporter'
   CodeClimate::TestReporter.start
 else
