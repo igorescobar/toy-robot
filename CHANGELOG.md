@@ -1,3 +1,9 @@
+== v0.2.1 (Jun/03 2015 21:39 -0300 by Igor Escobar) ==
+
+Bugfixes:
+
+* prevent starting with a invalid x,y route
+
 == v0.2.0 (Jun/03 2015 21:15 -0300 by Igor Escobar) ==
 
 Features:
