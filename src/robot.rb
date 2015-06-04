@@ -24,4 +24,8 @@ class Robot < Interface
   def facing
     @router.facing
   end
+
+  def do(command, arguments)
+    send command, *arguments if respond_to? command
+  end
 end

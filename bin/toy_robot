@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require "./src/robot_client"
+
+ToyRobotClient.start(ARGV)

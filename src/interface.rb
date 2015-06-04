@@ -1,8 +1,8 @@
 class Interface
   def place(x, y, facing, router = self.router)
-    router.x = x
-    router.y = y
-    router.facing = facing
+    router.x = x.to_i
+    router.y = y.to_i
+    router.facing = facing.downcase.to_sym
   end
 
   def left(router = self.router)

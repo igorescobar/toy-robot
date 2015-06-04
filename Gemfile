@@ -9,7 +9,8 @@ group :development do
   gem 'byebug'
   gem 'reek'
   gem 'rubocop', require: false
-  gem 'yard'
+  gem 'thor'
+  gem 'colorize'
 end
 
 group :test do
