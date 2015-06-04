@@ -36,7 +36,7 @@ Check test coverage (after running rspec):
 
 Check code smells:
 
-    $ rake reek
+    $ reek
 
 Rubocop report:
 
