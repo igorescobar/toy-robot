@@ -18,9 +18,13 @@ A simulation of a toy robot moving on a square tabletop, of dimensions 5 units x
 
     $ stepup changelog
 
+## Usage
+
+    $ bin/toy_robot interpret ./test_data/commands_1.txt
+
 ## Testing
 
-Code quality is attempted by using [RSpec](http://rspec.info/) for testing, [SimpleCov](https://github.com/colszowka/simplecov) for code test coverage, [Reek](https://github.com/troessner/reek) to fix code smells, as well as [Code Climate](https://codeclimate.com/) for quality metrics.
+Code quality is attempted by using [RSpec](http://rspec.info/) for testing, [SimpleCov](https://github.com/colszowka/simplecov) for code test coverage, [Rubocop](https://github.com/bbatsov/rubocop) for static code analyzer, [Reek](https://github.com/troessner/reek) to fix code smells, as well as [Code Climate](https://codeclimate.com/) for quality metrics.
 
 Run tests:
 
@@ -34,6 +38,9 @@ Check code smells:
 
     $ rake reek
 
+Rubocop report:
+
+    $ open rubocop.html
 
 ## Specification
 
