@@ -20,6 +20,14 @@ class Router
     [:north, :east, :south, :west]
   end
 
+  def x=(x)
+    @x = valid_range!(x, @@x_range)
+  end
+
+  def y=(y)
+    @y = valid_range!(y, @@y_range)
+  end
+
   def facing=(facing)
     @facing = facing if directions.include? facing
   end

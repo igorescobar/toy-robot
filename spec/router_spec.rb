@@ -44,4 +44,28 @@ describe Router do
 
     it { is_expected.to be :east }
   end
+
+  context "preventing placing at invalid x and y" do
+    context "positive" do
+      let(:router) { Router.new(0, 0, :north) }
+      before do
+        router.x = 10
+        router.y = 10
+      end
+
+      it { expect(router.x).to be 4 }
+      it { expect(router.y).to be 4 }
+    end
+
+    context "negative" do
+      let(:router) { Router.new(0, 0, :north) }
+      before do
+        router.x = -1
+        router.y = -100
+      end
+
+      it { expect(router.x).to be 0 }
+      it { expect(router.y).to be 0 }
+    end
+  end
 end
