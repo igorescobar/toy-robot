@@ -22,7 +22,7 @@ describe Robot do
 
   context "#right" do
     before(:all) { @robot = Robot.new }
-    before(:each) { @robot.right }
+    before(:each) { @robot.do 'right' }
     subject { @robot.facing }
 
     it { is_expected.to be :east }
@@ -34,7 +34,7 @@ describe Robot do
 
   context "#left" do
     before(:all) { @robot = Robot.new }
-    before(:each) { @robot.left }
+    before(:each) { @robot.do 'left' }
     subject { @robot.facing }
 
     it { is_expected.to be :west }
@@ -59,7 +59,7 @@ describe Robot do
     let(:robot) { Robot.new }
     context "one move" do
       before do
-        robot.move
+        robot.do 'move'
       end
 
       it { expect(robot.x).to be 0 }
@@ -69,8 +69,8 @@ describe Robot do
 
     context "two moves" do
       it "it should move towards router configuration" do
-        robot.move
-        robot.move
+        robot.do 'move'
+        robot.do 'move'
         expect(robot.x).to be 0
         expect(robot.y).to be 2
         expect(robot.facing).to be :north
@@ -87,7 +87,7 @@ describe Robot do
 
     it "should change place and report" do
       robot.place 1, 2, :east
-      robot.right
+      robot.do 'right'
       expect(capture_stdout { robot.report }).to eq "1,2,SOUTH\n"
     end
   end
@@ -95,8 +95,8 @@ describe Robot do
   context "provided use case scenarios #1" do
     let(:robot) { Robot.new }
     it "should be at 0,1,NORTH" do
-      robot.place 0, 0, :north
-      robot.move
+      robot.do 'place', [0, 0, :north]
+      robot.do 'move'
       expect(capture_stdout { robot.report }).to eq "0,1,NORTH\n"
     end
   end
